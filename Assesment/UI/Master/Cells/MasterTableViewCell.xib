@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -18,23 +18,23 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="rgi-nB-kKw">
-                        <rect key="frame" x="16" y="8" width="100" height="100"/>
+                        <rect key="frame" x="16" y="8" width="36" height="36"/>
                         <constraints>
                             <constraint firstAttribute="width" secondItem="rgi-nB-kKw" secondAttribute="height" multiplier="1:1" id="jmT-Ja-jPE"/>
-                            <constraint firstAttribute="width" constant="100" id="vBG-2O-28V"/>
+                            <constraint firstAttribute="width" constant="36" id="vBG-2O-28V"/>
                         </constraints>
                     </imageView>
                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="fZT-LU-Hr1">
-                        <rect key="frame" x="132" y="8" width="172" height="37.5"/>
+                        <rect key="frame" x="68" y="8" width="236" height="37.5"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YN4-Yv-NMP">
-                                <rect key="frame" x="0.0" y="0.0" width="172" height="20.5"/>
+                                <rect key="frame" x="0.0" y="0.0" width="236" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AIn-rM-NjQ">
-                                <rect key="frame" x="0.0" y="20.5" width="172" height="17"/>
+                                <rect key="frame" x="0.0" y="20.5" width="236" height="17"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -53,9 +53,9 @@
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
-                <outlet property="imgAnimie" destination="rgi-nB-kKw" id="iQ4-0s-Err"/>
-                <outlet property="lblTitle" destination="YN4-Yv-NMP" id="dzS-r3-QVl"/>
-                <outlet property="lblTopRated" destination="AIn-rM-NjQ" id="xcM-rZ-6fW"/>
+                <outlet property="animieImage" destination="rgi-nB-kKw" id="iQ4-0s-Err"/>
+                <outlet property="titleLabel" destination="YN4-Yv-NMP" id="dzS-r3-QVl"/>
+                <outlet property="topRatedLabel" destination="AIn-rM-NjQ" id="xcM-rZ-6fW"/>
             </connections>
             <point key="canvasLocation" x="137.68115942028987" y="97.433035714285708"/>
         </tableViewCell>
