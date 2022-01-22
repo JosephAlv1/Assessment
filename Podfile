@@ -8,7 +8,7 @@ target 'Assesment' do
   use_frameworks!
 
   # Pods for Assesment
-    pod 'SDWebImage'
+#    pod 'SDWebImage'
 
   target 'AssesmentTests' do
     inherit! :search_paths

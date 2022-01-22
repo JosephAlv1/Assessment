@@ -41,12 +41,18 @@ class MasterViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
+    // MARK: - Helping Methods
     func searchAnimesWith(text: String) {
         self.interactor?.searchAnimesWith(text: text)
     }
     
     func set(viewData: Master.ViewData) {
         self.viewData = viewData
+    }
+    
+    func searchTextFrom(searchBar: UISearchBar) {
+        guard let _text = searchBar.text, _text.count > 0 else { return }
+        searchAnimesWith(text: _text)
     }
     
     
@@ -73,13 +79,11 @@ extension MasterViewController: UITableViewDataSource {
         let animie = self.viewData?.animies[indexPath.row]
         return MasterTableViewCell.cellFor(tableView: tableView, indexPath: indexPath, animie: animie!)
     }
-    
-    
 }
 
 // MARK: - UISearchBarDelegate
 extension MasterViewController: UISearchBarDelegate {
-
+    
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
     }
 
@@ -89,8 +93,7 @@ extension MasterViewController: UISearchBarDelegate {
 
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
         searchBar.resignFirstResponder()
-        guard let _text = searchBar.text, _text.count > 0 else { return }
-        searchAnimesWith(text: _text)
+        searchTextFrom(searchBar: searchBar)
     }
 
     func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {

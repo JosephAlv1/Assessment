@@ -6,17 +6,24 @@
 //
 
 import UIKit
-import SDWebImage
+//import SDWebImage
 
 class MasterTableViewCell: UITableViewCell {
     
+    //MARK: - Outlest
+    
     static let identifer = "MasterTableViewCell"
     
-    @IBOutlet weak var lblTitle: UILabel!
-    @IBOutlet weak var lblTopRated: UILabel!
-    @IBOutlet weak var imgAnimie: UIImageView!
+    @IBOutlet weak var titleLabel: UILabel!
+    @IBOutlet weak var topRatedLabel: UILabel!
+    @IBOutlet weak var animieImage: UIImageView! {
+        didSet {
+            animieImage.layer.cornerRadius = animieImage.frame.width/2
+            animieImage.backgroundColor = .gray
+        }
+    }
     
-    
+    //MARK: - Methods
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -36,11 +43,12 @@ class MasterTableViewCell: UITableViewCell {
     static func cellFor(tableView: UITableView, indexPath: IndexPath, animie: Master.Animie) -> MasterTableViewCell {
         
         let cell: MasterTableViewCell = tableView.dequeueReusableCell(withIdentifier: MasterTableViewCell.identifer) as! MasterTableViewCell
-        cell.lblTitle.text = animie.title
-        cell.lblTopRated.text = animie.rated
-        cell.imgAnimie.sd_setImage(with: URL(string: animie.imageURL ?? "")) { image, error, cache, url in
-            
-        }
+        cell.titleLabel.text = animie.title
+        cell.topRatedLabel.text = animie.rated
+        ///commenting below code since its been asked to remove sdwebimage
+//        cell.imgAnimie.sd_setImage(with: URL(string: animie.imageURL ?? "")) { image, error, cache, url in
+//
+//        }
         return cell
     }
     
